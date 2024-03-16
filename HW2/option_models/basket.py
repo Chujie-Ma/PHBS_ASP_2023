@@ -113,7 +113,6 @@ def basket_price_norm_analytic(
     forward_basket = forward @ weights
 
     # 2 compute the normal volatility of basket
-
     cov_m = vol * cor_m * vol[:, None]
     vol_basket = np.sqrt(weights @ cov_m @ weights.T)
 
