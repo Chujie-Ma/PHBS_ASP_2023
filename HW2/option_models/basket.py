@@ -120,3 +120,17 @@ def basket_price_norm_analytic(
     norm = pf.Norm(vol_basket, intr=intr, divr=divr)
     price = norm.price(strike, forward_basket, texp, cp=cp)
     return price
+
+
+from sympy import *
+
+# 将根号2表示为符号
+sqrt_2 = sqrt(2)
+
+# 计算 (1 + sqrt(2))^2024
+result = (1 + sqrt_2)**2024
+
+# 转换为浮点数并提取小数点后的24位
+decimal_part = result.evalf(24)
+
+print(decimal_part)
